@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#241d43" />
+  <title>Cedrick & Monica — A Love Adventure ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <div class="brand">♥ <span>CEDRICK & MONICA</span></div>
+      <div class="top-actions">
+        <span id="levelLabel">WORLD 1 · MEADOW OF MEMORIES</span>
+        <button id="soundBtn" class="small-btn" aria-label="Toggle sound">♪ Sound: Off</button>
+        <button id="pauseBtn" class="small-btn">Ⅱ Pause</button>
+      </div>
+    </header>
+
+    <section class="game-frame" aria-label="Game area">
+      <canvas id="game" width="960" height="540" aria-label="Cedrick and Monica pixel platform game"></canvas>
+
+      <section id="titleScreen" class="overlay title-screen">
+        <div class="title-sparkle">✦ · ✧ · ♥ · ✧ · ✦</div>
+        <p class="eyebrow">A LITTLE ADVENTURE, MADE WITH LOVE</p>
+        <h1>Cedrick <span>&</span><br />Monica</h1>
+        <p class="subtitle">A Love Adventure</p>
+        <p class="dedication">For Monica Guillermo<br />Happy 78th Monthsary & 26th Birthday</p>
+        <div class="title-buttons">
+          <button id="startBtn" class="primary-btn">▶ START OUR ADVENTURE</button>
+          <button id="howBtn" class="secondary-btn">HOW TO PLAY</button>
+        </div>
+        <p class="tiny-note">A tiny pixel universe, just for you ♥</p>
+      </section>
+
+      <section id="dialogueOverlay" class="overlay hidden">
+        <div class="dialogue-card">
+          <div class="dialogue-heart">♥</div>
+          <p id="dialogueTag" class="eyebrow">A LITTLE MESSAGE</p>
+          <h2 id="dialogueTitle">A message for Monica</h2>
+          <p id="dialogueText"></p>
+          <button id="dialogueContinue" class="primary-btn">CONTINUE ♥</button>
+        </div>
+      </section>
+
+      <section id="pauseOverlay" class="overlay hidden">
+        <div class="dialogue-card">
+          <p class="eyebrow">TAKE YOUR TIME</p>
+          <h2>Adventure Paused</h2>
+          <p>Even heroes deserve a little break.</p>
+          <button id="resumeBtn" class="primary-btn">RESUME ADVENTURE</button>
+          <button id="restartBtn" class="secondary-btn">START OVER</button>
+        </div>
+      </section>
+
+      <section id="endingOverlay" class="overlay hidden">
+        <div class="ending-card">
+          <div class="ending-hearts">♥ ✦ ♥ ✦ ♥</div>
+          <p class="eyebrow">THE BEST ENDING</p>
+          <h2>Our Love Story<br /><span>Continues</span></h2>
+          <p id="loveLetter" class="love-letter"></p>
+          <p class="signature">Forever your hero,<br /><strong>Cedrick Yago</strong> ♥</p>
+          <div class="title-buttons">
+            <button id="readAgainBtn" class="secondary-btn">READ MY LOVE LETTER</button>
+            <button id="playAgainBtn" class="primary-btn">PLAY AGAIN ♥</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="howOverlay" class="overlay hidden">
+        <div class="dialogue-card">
+          <p class="eyebrow">YOUR LITTLE GUIDE</p>
+          <h2>How to Play</h2>
+          <div class="instructions">
+            <p><b>← →</b> or <b>A / D</b> — Move</p>
+            <p><b>Space</b>, <b>↑</b>, or <b>W</b> — Jump</p>
+            <p><b>E</b> — Read nearby love notes</p>
+            <p>Collect ♥ hearts, avoid hazards, and reach the glowing castle gate.</p>
+            <p>On mobile, use the on-screen arrows and jump button.</p>
+          </div>
+          <button id="howCloseBtn" class="primary-btn">LET'S GO ♥</button>
+        </div>
+      </section>
+
+      <div class="hud">
+        <span class="hud-pill">♥ <b id="heartCount">0</b></span>
+        <span class="hud-pill" id="checkpointLabel">✦ Find the love notes</span>
+        <span class="hud-pill">♡ Cedrick's adventure</span>
+      </div>
+
+      <div class="touch-controls" aria-label="Touch controls">
+        <div class="touch-move">
+          <button data-key="left" aria-label="Move left">◀</button>
+          <button data-key="right" aria-label="Move right">▶</button>
+        </div>
+        <button data-key="jump" class="jump-button" aria-label="Jump">JUMP ↑</button>
+        <button data-key="interact" class="interact-button" aria-label="Interact">♥</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>Made with love by Cedrick Yago for Monica Guillermo</span>
+      <span>Collect hearts. Make memories. Find your forever. ♥</span>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
